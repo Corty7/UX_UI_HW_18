@@ -1,0 +1,45 @@
+.flexContainer{
+  display: flex;
+  flex-direction: column;
+}
+.flexContainer div{
+ width: 33%; 
+}
+.flexContainer div img{
+  object-fit: cover;
+  object-position: center;
+  height:300px;
+  width:300px;
+}
+.workGrid{
+  display: grid;
+  grid-template-areas: 'MyArea MyArea';
+}
+.workGrid div{
+  padding-bottom:25px;
+}
+.workGrid div img{
+  max-height: 500px;
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.myWork h1,
+.myWork h3{
+  text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+  
+    .workGrid{
+
+      grid-template-rows: 300px 300px 300px;
+     grid-template-columns: 1fr;
+     grid-template-areas:"MyArea";
+   }
+   .workGrid div img {
+    max-height: 300px;
+   }
+  .flexContainer div{
+    width: 100%; 
+   }
